@@ -1,0 +1,40 @@
+[package]
+name = "include_proto_dir"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.64"
+description = "A Rust crate for embedding and extracting Protobuf directories in your binary."
+license = "MIT"
+repository = "https://github.com/bliednov/include_proto_dir"
+homepage = "https://github.com/bliednov/include_proto_dir"
+documentation = "https://docs.rs/include_proto_dir"
+readme = "README.md"
+keywords = [
+    "protobuf",
+    "include",
+    "build",
+    "embed",
+    "dir",
+]
+categories = [
+    "development-tools",
+]
+
+[dependencies]
+anyhow = "1.0"
+include_dir = { version = "0.7", features = ["glob"] }
+
+[dev-dependencies]
+tempfile = "3.5"
+build-deps = "0.1"
+prost-build = "0.12"
+
+[build-dependencies]
+prost-build = "0.12"
+
+[features]
+default = []
+
+[profile.release]
+strip = true
+lto = true

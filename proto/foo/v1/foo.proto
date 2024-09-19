@@ -1,0 +1,12 @@
+/**
+ * FOO
+ */
+
+syntax = "proto3";
+package foo.v1;
+
+// Foo message.
+message Foo {
+  // Foo
+  string foo = 1;
+}
